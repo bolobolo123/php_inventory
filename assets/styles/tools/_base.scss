@@ -1,0 +1,147 @@
+html, body {
+    width: 100%;
+    height: 100%;
+	.container {
+	width: 100%;
+	margin: auto;
+	background: #fff;
+	}
+}
+
+// HEADER
+.header {
+	width: 100%;
+	height: $height-header;
+	border-bottom: 2px solid $color-grey1;
+	margin-bottom: $margin-main/2;
+	// Flex
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	.flex-left, .flex-right { height: 100%; }
+
+	// HEADER LEFT
+	.flex-left {
+		margin-left: $margin-main;
+		// Flex
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: center;
+
+		// LOGO
+		.logo {
+			width: 100px;
+			height: 100%;
+			line-height: $height-header;
+			border-right: 2px solid $color-grey1;
+			font-size: 25px;
+			font-weight: bold;
+			font-family: $font-text;
+		}
+
+		// MENU
+		.top-bar {
+			width: 400px;
+			height: 100%;
+			font-family: $font-text;
+			cursor: pointer;
+			ul {
+				width: 100%;
+				height: 100%;
+				// Flex
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				align-items: center;
+
+				// EVERY LI
+				li {
+					position: relative;
+					width: 100px;
+					height: 100%;
+					text-align: center;
+					line-height: $height-header;
+					border-right: 2px solid $color-grey1;
+					a {
+						text-decoration: none;
+					}
+					ul { display: none; }
+				}
+				li:hover {
+					color: $color-hover;
+				}
+				li:hover ul {
+					width: 100%;
+					height: auto;
+					display: flex;
+					flex-direction: column;
+					justify-content: flex-start;
+					align-items: center;
+					position: absolute;
+					left: 0;
+					top: 100%;
+					z-index: 5;
+					li {
+						background: $color-white;
+						border: 1px solid $color-grey1;
+						transition: 0.15s;
+						a {
+							text-decoration: none;
+						}
+					}
+					li:hover {
+						background: $color-hover;
+						color: $color-white2;
+						transition: 0.15s;
+					}
+				}
+			}
+		}
+	}
+
+	// HEADER RIGHT
+	.flex-right {
+		margin-right: $margin-main;
+		// Flex
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-end;
+		align-items: center;
+		// SEARCH 
+		.search-bar {
+			height: 100%;
+			// FORM
+			form {
+				height: 100%;
+				// INPUT
+				input {
+					width: 300px;
+					height: 100%;
+					box-sizing: border-box;
+				}
+			}
+		}
+
+		// PROFILE
+		.profile-img {
+			width: 100px;
+			height: 45px;
+			text-align: right;
+			font-size: 25px;
+			font-weight: bold;
+			line-height: $height-header;
+			font-family: $font-text;
+			// LINK
+			.picture {
+				display: block;
+				width: 45px;
+				height: 45px;
+				margin: auto;
+				border-radius: 50%;
+				background: #000;
+			}
+		}
+	}
+}

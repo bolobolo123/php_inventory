@@ -1,0 +1,324 @@
+.add-product-retour {
+	font-family: $font-text;
+	text-decoration: none;
+	margin: $margin-main;
+}
+
+// FORM
+.pform1-container {
+	width: 1220px;
+	height: 700px;
+	margin: 50px auto;
+	text-align: center;
+	// FLEX
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	// TITLE
+	.title-container {
+		padding-bottom: 30px;
+		border-bottom: 1px solid $color-grey1;
+		h2 {
+			font-family: $font-text;
+			font-size: 36px;
+			color: $color-grey3; 
+		}
+		h1 {
+			font-family: $font-text;
+			font-weight: 700;
+			font-size: 52px;
+			color: $color-black;
+		}
+	}
+
+	// MAIN CONTENT
+	.main-container {
+		width: 100%;
+		height: 540px;
+		// FLEX
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+		//PRODUCTS
+		.product-img {
+			width: 250px;
+			height: 250px;
+			margin: 10px;
+			background: $color-grey1;
+			position: relative;
+			// SHADOW
+			-webkit-box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.15);
+			   -moz-box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.15);
+			    	box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.15);
+		}
+		.product-hover {
+			width: 150px;
+			height: 50px;
+			background: $color-black;
+			display: none;
+			text-decoration: none;
+			// FONT
+			font-family: $font-text;
+			font-size: 15px;
+			font-weight: 900;
+			line-height: 50px;
+			color: $color-white;
+			// POSITION
+			position: absolute;
+			left: 50%;
+			bottom: 10%;
+			margin-left: -75px;
+			transition: 0.15s;
+		}
+		.product-hover:hover {
+			border: 3px solid $color-black;
+			background: none;
+			color: $color-black;
+			line-height: 44px;
+			transition: 0.15s;
+		}
+		.product-img:hover .product-hover{
+			display: block;
+
+		}
+	}
+}
+
+.pform1-container .main-container {
+	input[type='text'], input[type='password'], textarea, datalist{
+			width: 100%;
+			height: 40px;
+			border-bottom: 2px solid $color-black;
+			// FONT
+			font-family: $font-text;
+			font-size: 20px;
+			padding-left: 5px;
+			color: $color-black;
+	}
+	select {
+		height: 30px;
+	}
+	// SUBMIT
+	.submit-btn {
+		display: inline-block;
+		width: 270px;
+		height: 60px;
+		background: $color-black;
+		// FONT
+		font-family: $font-text;
+		font-size: 20px;
+		font-weight: 900;
+		color: $color-white;
+		text-decoration: none;
+		line-height: 60px;
+		transition: 0.15s;
+	}
+	// SUBMIT:HOVER
+	.submit-btn:hover {
+		border: 3px solid $color-black;
+		background: none;
+		color: $color-black;
+		transition: 0.15s;
+	}
+}
+
+
+
+// 2ND FORM
+.main-container .pform1-container {
+	width: 100%;
+	margin: auto;
+	// FLEX
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: flex-start;
+	flex-wrap: wrap;
+	// ALL
+	.left-container, .right-container {
+		width: 50%;
+		// FONT
+		text-align: left;
+		font-family: $font-text;
+		// FLEX
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-tems: flex-start;
+		.form-title {
+			// FONT
+			font-size: 20px;
+			font-weight: 900;
+			color: $color-black;
+		}
+		.numb-container {
+			width: 80%;
+			// FLEX
+			display: flex;
+			flex-direction: row;
+			justify-content: flex-start;
+			align-items: space-between;
+
+			// INPUTS
+			input[type="number"] {
+			width: 90%;
+			height: 40px;
+			border-bottom: 2px solid $color-black;
+			// FONT
+			font-family: $font-text;
+			font-size: 20px;
+			padding-left: 5px;
+			color: $color-black;
+			}
+		}
+		.radios {
+			label {
+				// FONT
+				font-family: $font-text;
+				font-size: 20px;
+				padding-left: 5px;
+				color: $color-black;
+				input[type="radio"] {
+					width: 20px;
+					height: 20px;
+				}
+			}
+		}
+		.input-container {
+			width: 80%;
+
+			.labels {
+				color: $color-grey2;
+				font-weight: 700;
+				padding: 5px;
+			}
+		}
+		.description {
+			height: 200px;
+			textarea {
+				padding-top: 10px;
+				height: 150px;
+			}
+		}
+
+
+	}
+	// LEFT
+	.left-container {
+		height: 540px;
+	}
+	// RIGHT
+	.right-container {
+		height: 540px;
+	}
+	.submits{
+		input[value='CANCEL'] {
+			background: white;
+			color: $color-black;
+			// SHADOW
+			-webkit-box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.15);
+			   -moz-box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.15);
+			    	box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.15);
+			margin-right: 50px;
+		}
+		input[value='CONTINUE'] {
+			margin-left: 50px;
+		}
+	}
+}
+
+
+// 3RD FORM
+.main-container .pform1-container {
+	.show-img, .show-info {
+		height: 100%;
+	}
+	.show-img {
+		width: 60%;
+		background: #ececec;
+		font-family: $font-text;
+	}
+	.show-info {
+		width: 40%;
+		font-family: $font-text;
+		// FLEX
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: flex-start;
+	}
+	.info-title, .info-container, .info-submit {
+		width: 100%;
+	}
+	.info-title {
+		text-align: left;
+		margin-top: 100px;
+		margin-left: $margin-main;
+		.title1 {
+			font-size: 35px;
+			color: $color-black;
+		}
+		.title2 {
+			font-size: 20px;
+			font-weight: 300;
+			color: $color-grey2; 
+		}
+	}
+	.info-container {
+		height: 300px;
+		margin-left: $margin-main;
+		// FLEX
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: space-between;
+		flex-wrap: wrap;
+	
+		.info-block {
+			// FLEX
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			align-items: flex-start;
+			width: 40%;
+			height: 40%;
+			text-align: left;
+			font-size: 18px;
+			font-weight: 300;
+			color: $color-grey2;
+			.block-title {
+				font-size: 15px;
+				font-weight: 700;
+				color: $color-black;
+			}
+		}
+	}
+
+	.info-submit {
+		margin-left: $margin-main;
+		// FLEX
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: flex-end;
+		margin-right: 50px;
+		input[type="file"] {
+			display: none;
+		}
+		label {
+			margin-right: $margin-main;
+			font-family: $font-text;
+			font-size: 16px;
+			color: $color-black;
+			text-decoration: underline;
+
+			img {
+				width: 30px;
+				margin-right: 10px;
+			}
+		}
+	}
+}
